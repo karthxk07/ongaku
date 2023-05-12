@@ -1,5 +1,3 @@
-import { useRef, useState } from "react";
-import { AiOutlineLeftCircle } from "react-icons/ai";
 import "./BannerFlash.css";
 
 export const BannerFlash = () => {
