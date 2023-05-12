@@ -1,0 +1,5 @@
+
+.searchText:focus .searchForm{
+    box-shadow: 0 4px 6px -1px white;
+    color:white;
+}

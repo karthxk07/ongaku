@@ -1,0 +1,10 @@
+@keyframes next {
+    from {left:0%}
+    to {left:-100%}
+    
+}
+@keyframes nextLast {
+    from {left:100%}
+    to {left:0%}
+    
+}
