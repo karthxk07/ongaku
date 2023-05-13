@@ -8,6 +8,7 @@ import {
   AiOutlineSetting,
   AiFillMessage,
 } from "react-icons/ai";
+
 export const Menu = () => {
   let [activeIndex, setactiveIndex] = useState(0);
   let menuItems = [
@@ -41,6 +42,9 @@ export const Menu = () => {
                   } p-2 rounded-2xl duration-300 ease-in-out   text-left content-center my-1 cursor-pointer hover:text-stone-200`}
                   onClick={() => {
                     setactiveIndex(Index);
+                    Item[1] === "Home"
+                      ? (window.location.href = `/`)
+                      : (window.location.href = `/${Item[1]}`);
                   }}
                 >
                   <ItemTag className="my-auto mr-5 group-hover:scale-110" />

@@ -1,16 +1,40 @@
 import './App.css';
 import { SideBar } from './components/Sidebar';
-import { MainBody } from './components/MainBody';
+import { DiscoverContainer } from './components/Discover/Discover';
+import React from 'react';
+import {createBrowserRouter,RouterProvider} from "react-router-dom";
+import MainBody from './components/MainBody';
 
 
+
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainBody/>,
+  },
+  
+  {
+    path: "/discover",
+    element: <DiscoverContainer/>,
+  },
+  
+ 
+  
+]);
 
 function App() {
+  
   return (
     <>
     <div className='main flex'>
-      <div className='w-1/5'></div>
+      <div className='w-64'></div>
       <SideBar/>
-      <MainBody className="h-screen"/>
+      <div className=' flex-grow'>
+        <RouterProvider router={router} />
+      </div>
     </div>
     </>
   );

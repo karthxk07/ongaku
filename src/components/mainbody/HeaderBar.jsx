@@ -1,5 +1,5 @@
 import { AiOutlineCaretDown } from "react-icons/ai";
-import { authenticated, userDetails } from "../authentication/authenticated";
+import { authenticated, userDetails } from "../../authentication/authenticated";
 
 export const HeaderBar = () => {
   var imageUrl;
