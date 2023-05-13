@@ -12,11 +12,7 @@ import MainBody from './components/MainBody';
 
 const router = createBrowserRouter([
   {
-<<<<<<< HEAD
-    path: "/",
-=======
     path: "/ongaku",
->>>>>>> edit
     element: <MainBody/>,
   },
   
