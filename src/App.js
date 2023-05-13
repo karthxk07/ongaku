@@ -1,25 +1,31 @@
 import './App.css';
-import { SideBar } from './components/Sidebar';
 import { DiscoverContainer } from './components/Discover/Discover';
 import React from 'react';
 import {createBrowserRouter,RouterProvider} from "react-router-dom";
 import MainBody from './components/MainBody';
-
-
-
-
+import { Root } from './components/root.tsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/ongaku",
-    element: <MainBody/>,
-  },
-  
-  {
-    path: "/ongaku/discover",
-    element: <DiscoverContainer/>,
-  },
+    element: <Root/>,
+    children: [
+    {
+      path: "/ongaku",
+      element: <MainBody />,
+    },
+    {
+      path:"/ongaku/discover",
+      element:<DiscoverContainer/>
+    },
+    {
+      path:"/ongaku/*",
+      element:null
+
+    }
+  ]
+  }
   
  
   
@@ -28,15 +34,7 @@ const router = createBrowserRouter([
 function App() {
   
   return (
-    <>
-    <div className='main flex'>
-      <div className='w-64'></div>
-      <SideBar/>
-      <div className=' flex-grow'>
-        <RouterProvider router={router} />
-      </div>
-    </div>
-    </>
+    <RouterProvider router={router}></RouterProvider>
   );
 }
 
