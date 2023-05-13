@@ -1,5 +1,3 @@
-import "./BannerFlash.css";
-
 export const BannerFlash = () => {
   return (
     <div className="h-80 w-full relative overflow-hidden">
@@ -8,7 +6,7 @@ export const BannerFlash = () => {
       >
         <img
           className={`object-cover w-full h-full absolute`}
-          src="banner.png"
+          src="/banner.png"
           alt="bannerImg"
         />
       </div>
