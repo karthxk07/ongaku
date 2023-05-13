@@ -6,7 +6,7 @@ export const BannerFlash = () => {
       >
         <img
           className={`object-cover w-full h-full absolute`}
-          src="/banner.png"
+          src="ongaku/banner.png"
           alt="bannerImg"
         />
       </div>
