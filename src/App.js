@@ -12,12 +12,12 @@ import MainBody from './components/MainBody';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/ongaku",
     element: <MainBody/>,
   },
   
   {
-    path: "/discover",
+    path: "/ongaku/discover",
     element: <DiscoverContainer/>,
   },
   

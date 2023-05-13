@@ -43,8 +43,8 @@ export const Menu = () => {
                   onClick={() => {
                     setactiveIndex(Index);
                     Item[1] === "Home"
-                      ? (window.location.href = `/`)
-                      : (window.location.href = `/${Item[1]}`);
+                      ? (window.location.href = `/ongaku`)
+                      : (window.location.href = `/ongaku/${Item[1]}`);
                   }}
                 >
                   <ItemTag className="my-auto mr-5 group-hover:scale-110" />

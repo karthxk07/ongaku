@@ -1,4 +1,4 @@
 export const trendingList = [
-  { name: "sukoon", imgUrl: "/banner.png" },
-  { name: "sukoon", imgUrl: "/logo.png" },
+  { name: "sukoon", imgUrl: "ongaku/banner.png" },
+  { name: "sukoon", imgUrl: "ongaku/logo.png" },
 ];
