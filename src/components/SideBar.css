@@ -1,0 +1,14 @@
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: 1px;  /* Firefox */
+}
+
+.sidebarBody{
+    background-color: rgb(36, 33, 33);
+    
+}
