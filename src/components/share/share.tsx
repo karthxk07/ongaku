@@ -14,7 +14,7 @@ const postMethod = (data, formRef) => {
 
   axios({
     method: "post",
-    url: "http://localhost:8000/ongaku/share/new",
+    url: "https://ongaku.onrender.com/ongaku/share/new",
     headers: {
       "Content-Type": "multipart/form-data",
     },
@@ -28,14 +28,16 @@ const getSpotifyData = (e, formRef, setSelectedImg) => {
   e && (i = e.value.match(/([^/]+)\/?$/));
   console.log(i);
   try {
-    axios.get(`http://localhost:8000/ongaku/share/${i[1]}`).then((res) => {
-      formRef.current.id.value = res.data.id;
-      formRef.current.name.value = res.data.name;
-      formRef.current.desc.value = res.data.description;
-      formRef.current.defaultUrl.value = res.data.images[0].url;
-      formRef.current.imageUrl.value === "" &&
-        setSelectedImg(res.data.images[0].url);
-    });
+    axios
+      .get(`https://ongaku.onrender.com/ongaku/share/${i[1]}`)
+      .then((res) => {
+        formRef.current.id.value = res.data.id;
+        formRef.current.name.value = res.data.name;
+        formRef.current.desc.value = res.data.description;
+        formRef.current.defaultUrl.value = res.data.images[0].url;
+        formRef.current.imageUrl.value === "" &&
+          setSelectedImg(res.data.images[0].url);
+      });
   } catch (error) {
     console.error();
   }
