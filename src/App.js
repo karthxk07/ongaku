@@ -1,12 +1,12 @@
 import "./App.css";
 import { DiscoverContainer } from "./components/discover/discover";
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import MainBody from "./components/MainBody";
 import { Root } from "./components/root.tsx";
 import { ShareContainer } from "./components/share/share.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/ongaku",
     element: <Root />,
