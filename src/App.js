@@ -1,30 +1,34 @@
 import "./App.css";
 import { DiscoverContainer } from "./components/discover/discover";
 import React from "react";
-import { RouterProvider, createHashRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createHashRouter,
+} from "react-router-dom";
 import MainBody from "./components/MainBody";
 import { Root } from "./components/root.tsx";
 import { ShareContainer } from "./components/share/share.tsx";
 
 const router = createHashRouter([
   {
-    path: "/ongaku",
+    path: "/",
     element: <Root />,
     children: [
       {
-        path: "/ongaku",
+        path: "/",
         element: <MainBody />,
       },
       {
-        path: "/ongaku/discover",
+        path: "/discover",
         element: <DiscoverContainer />,
       },
       {
-        path: "/ongaku/share",
+        path: "/share",
         element: <ShareContainer />,
       },
       {
-        path: "/ongaku/*",
+        path: "/*",
         element: null,
       },
     ],

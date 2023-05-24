@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AiFillHome,
   AiFillDatabase,
@@ -11,7 +11,6 @@ import {
 import { Link } from "react-router-dom";
 
 export const Menu = () => {
-  let [activeIndex, setactiveIndex] = useState(0);
   let menuItems = [
     [AiFillHome, "Home"],
     [AiOutlineSearch, "Discover"],
@@ -21,6 +20,18 @@ export const Menu = () => {
     [AiOutlineUser, "Profile"],
     [AiOutlineSetting, "Settings"],
   ];
+
+  let [activeIndex, setactiveIndex] = useState(0);
+
+  useEffect(() => {
+    let location = window.location.hash.replace("#", "").replace("/", "");
+    menuItems.forEach((item, i) => {
+      if (item[1].toLowerCase() === location) {
+        setactiveIndex(i);
+      }
+    });
+  }, [window.location.hash]);
+
   return (
     <>
       <div
@@ -47,11 +58,7 @@ export const Menu = () => {
                 >
                   <Link
                     className="flex"
-                    to={
-                      Item[1] === "Home"
-                        ? "/ongaku"
-                        : `/ongaku/${Item[1].toLowerCase()}`
-                    }
+                    to={Item[1] === "Home" ? "/" : `/${Item[1].toLowerCase()}`}
                   >
                     <ItemTag className="my-auto mr-5 group-hover:scale-110" />
                     {Item[1]}
