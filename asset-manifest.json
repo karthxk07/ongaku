@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ongaku/static/css/main.70cace6a.css",
-    "main.js": "/ongaku/static/js/main.c968b891.js",
+    "main.js": "/ongaku/static/js/main.67b2cc45.js",
     "static/js/787.0ade5f07.chunk.js": "/ongaku/static/js/787.0ade5f07.chunk.js",
     "index.html": "/ongaku/index.html",
     "main.70cace6a.css.map": "/ongaku/static/css/main.70cace6a.css.map",
-    "main.c968b891.js.map": "/ongaku/static/js/main.c968b891.js.map",
+    "main.67b2cc45.js.map": "/ongaku/static/js/main.67b2cc45.js.map",
     "787.0ade5f07.chunk.js.map": "/ongaku/static/js/787.0ade5f07.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.70cace6a.css",
-    "static/js/main.c968b891.js"
+    "static/js/main.67b2cc45.js"
   ]
 }
