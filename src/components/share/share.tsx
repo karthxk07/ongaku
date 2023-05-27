@@ -4,8 +4,6 @@ import { AiFillCloseCircle } from "react-icons/ai";
 
 //POST to /new
 const postMethod = (data, formRef) => {
-  console.log("Executed");
-  console.log(data);
   let form = formRef.current;
   const formData = new FormData(form);
   data = data.target;
@@ -26,7 +24,7 @@ const postMethod = (data, formRef) => {
 const getSpotifyData = (e, formRef, setSelectedImg) => {
   let i;
   e && (i = e.value.match(/([^/]+)\/?$/));
-  console.log(i);
+  console.log("Getting Spotify data......");
   try {
     axios
       .get(`https://ongaku.onrender.com/ongaku/share/${i[1]}`)
@@ -49,19 +47,22 @@ export const ShareContainer = () => {
 
   return (
     <>
-      <div className="flex relative m-5">
+      <div className="flex relative h-full p-3">
         <AiFillCloseCircle
           className="absolute top-0 end-0"
           onClick={() => {
             console.log((document.getElementsByTagName("img")[1].src = ""));
           }}
         />
-        <div className=" flex-col justify-center box-border  rounded-lg bg-stone-900 shadow-lg">
-          <div className="m-3">
+        <div className=" flex-col justify-center box-border  rounded-lg  bg-stone-900 shadow-lg">
+          <div className="w-[300px] h-full ">
             <img
               className=" box-border rounded-lg w-full m-auto"
               src={selectedImg}
               alt="uploadImg"
+              onError={(e) => {
+                console.log(e);
+              }}
             />
           </div>
           <p className="text-white text-center">
